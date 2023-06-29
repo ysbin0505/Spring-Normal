@@ -49,7 +49,7 @@ public class Order {
   public void setDiscountPrice(int discountPrice) {
     this.discountPrice = discountPrice;
   }
-//sdad
+
   @Override
   public String toString() {
     return "Order{" +
