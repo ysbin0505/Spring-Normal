@@ -1,5 +1,6 @@
 package Spring.cores;
 
+import Spring.cores.discount.DiscountPolicy;
 import Spring.cores.member.Grade;
 import Spring.cores.member.Member;
 import Spring.cores.member.MemberService;
