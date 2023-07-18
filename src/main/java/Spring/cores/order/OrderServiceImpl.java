@@ -18,8 +18,8 @@ public class OrderServiceImpl implements OrderService {
   private final DiscountPolicy discountPolicy;    //인터페이스에만 의존하도록 구현 but NPE 발생, 이 문제를 해결하려면
                                             //OrderServiceImpl에 DiscountPolicy의 구현 객체를 대신 생성하고 주입
   */
-  @Autowired private MemberRepository memberRepository;
-  @Autowired private DiscountPolicy discountPolicy;
+  @Autowired private final MemberRepository memberRepository;
+  @Autowired private final DiscountPolicy discountPolicy;
 
   /*@Autowired(required = false)
   public void setMemberRepository(MemberRepository memberRepository){
