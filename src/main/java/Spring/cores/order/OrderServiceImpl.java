@@ -6,10 +6,12 @@ import Spring.cores.discount.RateDiscountPolicy;
 import Spring.cores.member.Member;
 import Spring.cores.member.MemberRepository;
 import Spring.cores.member.MemoryMemberRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService {
 
   /*private final MemberRepository memberRepository = new MemoryMemberRepository();
@@ -33,13 +35,14 @@ public class OrderServiceImpl implements OrderService {
   }*/
 
   //new OrderServiceImpl();
-  @Autowired
+  /*@Autowired
   public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
     System.out.println("memberRepository = " + memberRepository);
     System.out.println("discountPolicy = " + discountPolicy);
     this.memberRepository = memberRepository;
     this.discountPolicy = discountPolicy;
-  }
+  }*/
+
 
   @Override
   public Order createOrder(Long memberId, String itemName, int itemPrice) {
