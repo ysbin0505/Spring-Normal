@@ -34,7 +34,7 @@ public class OrderServiceImpl implements OrderService {
     this.discountPolicy = discountPolicy;
   }*/
 
-  //new OrderServiceImpl();
+  //new OrderServiceImpl();d
   /*@Autowired
   public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
     System.out.println("memberRepository = " + memberRepository);
