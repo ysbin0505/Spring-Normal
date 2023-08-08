@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import javax.inject.Provider;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -26,17 +27,19 @@ public class PrototypeProviderTest {
     assertThat(count2).isEqualTo(1);
   }
 
+  @Scope("singleton")
   @Component
   static class ClientBean {
     @Autowired
-    private ObjectProvider<PrototypeBean> prototypeBeanProvider;
+    private Provider<PrototypeBean> prototypeBeanProvider;
+    //private ObjectProvider<PrototypeBean> prototypeBeanProvider;
     public int logic() {
-      PrototypeBean prototypeBean = prototypeBeanProvider.getObject();
+      PrototypeBean prototypeBean = prototypeBeanProvider.get();
       prototypeBean.addCount();
       int count = prototypeBean.getCount();
       return count;
     }
-  }
+  }//s
   @Scope("prototype")
   static class PrototypeBean {
     private int count = 0;
