@@ -24,6 +24,8 @@ public class PrototypeTest {
     assertThat(prototypeBean1).isNotSameAs(prototypeBean2);
 
     ac.close();
+
+    //초기화는 2번 된 것이 확인가능하나 close가 안됌
   }
 
     @Scope("prototype")
@@ -35,7 +37,7 @@ public class PrototypeTest {
 
       @PreDestroy
       public void destroy(){
-        System.out.println("PrototypeBean.destroy");
+        System.out.println("PrototypeBean.destroy");  //destroy안되는 것을 확인
       }
     }
   }
