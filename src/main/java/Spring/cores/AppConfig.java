@@ -5,10 +5,7 @@ package Spring.cores;
 import Spring.cores.discount.DiscountPolicy;
 import Spring.cores.discount.FixDiscountPolicy;
 import Spring.cores.discount.RateDiscountPolicy;
-import Spring.cores.member.MemberRepository;
-import Spring.cores.member.MemberService;
-import Spring.cores.member.MemberServiceImpl;
-import Spring.cores.member.MemoryMemberRepository;
+import Spring.cores.member.*;
 import Spring.cores.order.OrderService;
 import Spring.cores.order.OrderServiceImpl;
 import org.springframework.context.annotation.Bean;
@@ -42,8 +39,7 @@ public class AppConfig {
   @Bean
   public OrderService orderService(){
     System.out.println("call AppConfig.orderService");
-    //return new OrderServiceImpl(memberRepository(), discountPolicy());
-    return null;
+    return new OrderServiceImpl(memberRepository(), discountPolicy());
   }
   @Bean
   public DiscountPolicy discountPolicy(){

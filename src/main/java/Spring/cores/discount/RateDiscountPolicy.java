@@ -2,6 +2,7 @@ package Spring.cores.discount;
 
 import Spring.cores.member.Grade;
 import Spring.cores.member.Member;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
