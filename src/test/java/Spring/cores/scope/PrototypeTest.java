@@ -37,7 +37,7 @@ public class PrototypeTest {
 
       @PreDestroy
       public void destroy(){
-        System.out.println("PrototypeBean.destroy");  //destroy안되는 것을 확인
+        System.out.println("PrototypeBean.destroy");  //PreDestroy안되는 것을 확인
       }
     }
   }
