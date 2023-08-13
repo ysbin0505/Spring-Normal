@@ -39,7 +39,7 @@ public class PrototypeProviderTest {
       int count = prototypeBean.getCount();
       return count;
     }
-  }//sdaxasdsfsdfdas
+  }//sdaxas
   @Scope("prototype")
   static class PrototypeBean {
     private int count = 0;
